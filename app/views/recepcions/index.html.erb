@@ -1,0 +1,31 @@
+<h1>Recepcion</h1>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Cargo</th>
+      <th>Telefono</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recepcions.each do |recepcion| %>
+      <tr>
+        <td><%= recepcion.nombre %></td>
+        <td><%= recepcion.apellido %></td>
+        <td><%= recepcion.cargo %></td>
+        <td><%= recepcion.telefono %></td>
+        <td><%= link_to 'Mostrar', recepcion %></td>
+        <td><%= link_to 'Editar', edit_recepcion_path(recepcion) %></td>
+        <td><%= link_to 'Eliminar', recepcion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Recepcion', new_recepcion_path %>

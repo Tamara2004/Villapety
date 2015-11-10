@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @mascotum.nombre %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @mascotum.edad %>
+</p>
+
+<p>
+  <strong>Raza:</strong>
+  <%= @mascotum.raza %>
+</p>
+
+<p>
+  <strong>Servicio:</strong>
+  <%= @mascotum.servicio.tratamiento %>
+</p>
+
+
+<%= link_to 'Editar', edit_mascotum_path(@mascotum) %> |
+<%= link_to 'Volver', mascota_path %>
